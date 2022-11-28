@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "person.h"
+
 
 class ProjectTest : public ::testing::Test
 {
@@ -15,7 +15,7 @@ class ProjectTest : public ::testing::Test
 
 TEST_F(ProjectTest,PersonCanBeCreated)
 {
-    Person person;
+    
 }
 
 
