@@ -19,4 +19,8 @@ TEST_F(ProjectTest,ObjectWordCanBeCreated)
     Word word("name","imię");
 }
 
-
+TEST_F(ProjectTest,IfCreatedObjectHasWordGetShouldReturnThisWord)
+{
+    Word word("name","imię");
+    
+}
