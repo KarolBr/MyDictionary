@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include "Word.h"
 
 
 class ProjectTest : public ::testing::Test
@@ -13,9 +14,9 @@ class ProjectTest : public ::testing::Test
 
 
 
-TEST_F(ProjectTest,PersonCanBeCreated)
+TEST_F(ProjectTest,ObjectWordCanBeCreated)
 {
-    
+    Word word("name","imię");
 }
 
 

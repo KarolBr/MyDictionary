@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(MyTDD VERSION 1.0)
+project(MyDictionary VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 14)
 add_compile_options(-Wall -Wextra -pedantic -Werror)
