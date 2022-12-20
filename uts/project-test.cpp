@@ -19,8 +19,9 @@ TEST_F(ProjectTest,ObjectWordCanBeCreated)
     Word word("name","imię");
 }
 
-TEST_F(ProjectTest,IfCreatedObjectHasWordGetShouldReturnThisWord)
+TEST_F(ProjectTest,IfObjectWordIsCreatedMethodsGetShouldReturnValues)
 {
     Word word("name","imię");
     EXPECT_EQ("name",word.getWord());
+    EXPECT_EQ("date",word.getCreateDate());
 }

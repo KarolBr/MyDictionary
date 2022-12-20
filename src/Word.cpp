@@ -15,6 +15,18 @@ void Word::setKnowingLevel(int _knowingLevel)
     knowingLevel = _knowingLevel;
 }
 
+
+std::string Word::getCreateDate()
+{
+    return createDate;
+}
+
+std::string Word::getUpdateDate()
+{
+    return updateDate;
+}
+
+
 std::string Word::getWord()
 {
     return word;
