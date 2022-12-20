@@ -22,5 +22,5 @@ TEST_F(ProjectTest,ObjectWordCanBeCreated)
 TEST_F(ProjectTest,IfCreatedObjectHasWordGetShouldReturnThisWord)
 {
     Word word("name","imię");
-    
+    EXPECT_EQ("name",word.getWord());
 }
