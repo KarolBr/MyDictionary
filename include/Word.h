@@ -3,6 +3,9 @@
 #include <iostream>
 #include <chrono>
 #include <iomanip>
+// #include "tools.h"
+
+std::string getDateAndTimeToString(const char *param = "%F %T");
 
 class Word
 {
@@ -14,21 +17,15 @@ private:
     std::string updateDate;
     std::string exampleSencences;
     int knowingLevel;
-    std::string getTimeStamp(){
-        auto now = std::chrono::system_clock::now();
-        std::time_t date_time = std::chrono::system_clock::to_time_t(now);
-        return std::put_time(&date_time, "%d-%m-%Y %H-%M-%S");
-    }
 
 public:
     /* behaviour */
 
-    Word(std::string _word,std::string _mean):word(_word),meaning(_mean)
+    Word(std::string _word, std::string _mean) : word(_word), meaning(_mean)
     {
-        createDate = getTimeStamp();
+        createDate = getDateAndTimeToString();
         knowingLevel = 0;
     }
-
 
     void setUpdateDate(std::string _updateDate);
     void setExampleSentences(std::string _exampleSentences);
@@ -41,12 +38,16 @@ public:
     std::string getExampleSentences();
     int getKnowingLevel();
 
+    std::string getDateAndTimeToString(const char *param = "%F %T")
+    {
+        const std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
+        const std::time_t t_c = std::chrono::system_clock::to_time_t(now);
+        std::stringstream currTime;
+        currTime << std::put_time(std::localtime(&t_c), param);
+        return currTime.str();
+    }
 
-    
     ~Word();
 };
 
-
-
-
-#endif //Word.h
+#endif // Word.h

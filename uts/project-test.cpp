@@ -2,6 +2,7 @@
 #include "Word.h"
 
 
+
 class ProjectTest : public ::testing::Test
 {
     protected:
@@ -23,5 +24,5 @@ TEST_F(ProjectTest,IfObjectWordIsCreatedMethodsGetShouldReturnValues)
 {
     Word word("name","imię");
     EXPECT_EQ("name",word.getWord());
-    EXPECT_EQ("date",word.getCreateDate());
+    EXPECT_EQ(word.getDateAndTimeToString(),word.getCreateDate());
 }
