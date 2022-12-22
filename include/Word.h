@@ -17,6 +17,16 @@ private:
     std::string updateDate;
     std::string exampleSencences;
     int knowingLevel;
+    void setUpdateDate();
+
+    std::string getDateAndTimeToString(const char *param = "%F %T")
+    {
+        const std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
+        const std::time_t t_c = std::chrono::system_clock::to_time_t(now);
+        std::stringstream currTime;
+        currTime << std::put_time(std::localtime(&t_c), param);
+        return currTime.str();
+    }
 
 public:
     /* behaviour */
@@ -27,7 +37,7 @@ public:
         knowingLevel = 0;
     }
 
-    void setUpdateDate(std::string _updateDate);
+    
     void setExampleSentences(std::string _exampleSentences);
     void setKnowingLevel(int _knowingLevel);
 
@@ -38,14 +48,7 @@ public:
     std::string getExampleSentences();
     int getKnowingLevel();
 
-    std::string getDateAndTimeToString(const char *param = "%F %T")
-    {
-        const std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
-        const std::time_t t_c = std::chrono::system_clock::to_time_t(now);
-        std::stringstream currTime;
-        currTime << std::put_time(std::localtime(&t_c), param);
-        return currTime.str();
-    }
+    
 
     ~Word();
 };

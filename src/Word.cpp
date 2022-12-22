@@ -1,17 +1,19 @@
 #include "Word.h"
 
-void Word::setUpdateDate(std::string _updateDate)
+void Word::setUpdateDate()
 {
-    updateDate = _updateDate; 
+    updateDate = getDateAndTimeToString(); 
 }
 
 void Word::setExampleSentences(std::string _exampleSentences)
 {
+    setUpdateDate();
     exampleSencences = _exampleSentences;
 }
 
 void Word::setKnowingLevel(int _knowingLevel)
 {
+    setUpdateDate();
     knowingLevel = _knowingLevel;
 }
 
