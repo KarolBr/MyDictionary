@@ -3,6 +3,7 @@
 #include <iostream>
 #include <chrono>
 #include <iomanip>
+#include <vector>
 // #include "tools.h"
 
 std::string getDateAndTimeToString(const char *param = "%F %T");
@@ -15,7 +16,7 @@ private:
     std::string meaning;
     std::string createDate;
     std::string updateDate;
-    std::string exampleSentences;
+    std::vector<std::string> exampleSentences;
     int knowingLevel;
     void setUpdateDate();
 
@@ -47,7 +48,7 @@ public:
     std::string getUpdateDate();
     std::string getWord();
     std::string getMeaning();
-    std::string getExampleSentences();
+    std::vector<std::string> getExampleSentences();
     int getKnowingLevel();
 
     

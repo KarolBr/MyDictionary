@@ -8,7 +8,7 @@ void Word::setUpdateDate()
 void Word::setExampleSentences(std::string _exampleSentences)
 {
     setUpdateDate();
-    exampleSentences = _exampleSentences;
+    exampleSentences.push_back(_exampleSentences);
 }
 
 void Word::setKnowingLevel(int _knowingLevel)
@@ -39,7 +39,7 @@ std::string Word::getMeaning()
     return meaning;
 }
 
-std::string Word::getExampleSentences()
+std::vector<std::string> Word::getExampleSentences()
 {
     return exampleSentences;
 }
