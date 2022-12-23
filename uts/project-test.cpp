@@ -22,8 +22,28 @@ TEST_F(ProjectTest,ObjectWordCanBeCreated)
 
 TEST_F(ProjectTest,IfObjectWordIsCreatedMethodsGetShouldReturnValues)
 {
-    //Word word("name","imię");
+    Word word("name","imię");
     EXPECT_EQ("name",word.getWord());
-    EXPECT_EQ(word.getDateAndTimeToString(),word.getCreateDate());
+    //EXPECT_EQ(word.getDateAndTimeToString(),word.getCreateDate());
     EXPECT_EQ(0,word.getKnowingLevel());
 }
+
+
+TEST_F(ProjectTest,IfObjectWordIsModyfyingUpdataDateShouldBeSet)
+{
+    Word word("name","imię");
+    word.setKnowingLevel(3);
+    //std::cout<<"getUpdateDate: "<<word.getUpdateDate()<<std::endl;
+    EXPECT_NE("",word.getUpdateDate());
+
+}
+
+
+
+
+
+
+
+
+
+

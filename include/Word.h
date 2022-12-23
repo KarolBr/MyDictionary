@@ -15,7 +15,7 @@ private:
     std::string meaning;
     std::string createDate;
     std::string updateDate;
-    std::string exampleSencences;
+    std::string exampleSentences;
     int knowingLevel;
     void setUpdateDate();
 
@@ -34,7 +34,9 @@ public:
     Word(std::string _word, std::string _mean) : word(_word), meaning(_mean)
     {
         createDate = getDateAndTimeToString();
-        knowingLevel = 0;
+        knowingLevel = {};
+	updateDate = {};
+	exampleSentences = {};
     }
 
     
