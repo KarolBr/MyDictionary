@@ -1,4 +1,5 @@
 #include "Word.h"
+#include <vector>
 
 void Word::setUpdateDate()
 {
