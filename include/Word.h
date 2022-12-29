@@ -6,7 +6,7 @@
 #include <vector>
 // #include "tools.h"
 
-std::string getDateAndTimeToString(const char *param = "%F %T");
+//std::string getDateAndTimeToString(const char *param = "%F %T");
 
 class Word
 {

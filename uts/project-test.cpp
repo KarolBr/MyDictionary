@@ -38,6 +38,16 @@ TEST_F(ProjectTest,IfObjectWordIsModyfyingUpdataDateShouldBeSet)
 
 }
 
+TEST_F(ProjectTest,IfObjectWordIsCreatedAddExampleSentences)
+{
+    Word word("name","imię");
+    word.setExampleSentences("My name is Karol");
+    word.setExampleSentences("What is your name?");
+    word.setExampleSentences("What is your name?");
+    //std::cout<<"getUpdateDate: "<<word.getUpdateDate()<<std::endl;
+    EXPECT_EQ(2,word.getExampleSentences().size());
+
+}
 
 
 
