@@ -51,7 +51,11 @@ public:
     std::vector<std::string> getExampleSentences();
     int getKnowingLevel();
 
-    
+    friend std::ostream& operator<<(std::ostream& os,Word& word)
+	{
+		os<<word.getWord() << " | "  << word.getMeaning() << std::endl;
+		return os;
+	}
 
     ~Word();
 };
