@@ -50,11 +50,33 @@ TEST_F(ProjectTest,IfObjectWordIsCreatedAddExampleSentences)
 
 }
 
-TEST_F(ProjectTest,IfObjectDictionaryCanBeCreated)
+TEST_F(ProjectTest,IfObjectDictionaryCanBeCreatedAndAddNewWord)
 {
+    Word newWord("effort","wysiłek");
     Dictionary myDict;
+    myDict.addWord(newWord);
 }
 
+TEST_F(ProjectTest,IfAddFiveWordsintoDitionarySizeShouldBeFive)
+{
+    Word newWord1("effort","wysiłek");
+    Word newWord2("hermit","pustelnik");
+    Word newWord3("centenarian","stulatek");
+    Word newWord4("desk","biurko");
+    Word newWord5("window","okno");
+    Word newWord6("flood","powódź");
+    Dictionary myDict;
+    myDict.addWord(newWord1);
+    myDict.addWord(newWord2);
+    myDict.addWord(newWord3);
+    myDict.addWord(newWord4);
+    myDict.addWord(newWord5);
+    myDict.addWord(newWord6);
+    EXPECT_EQ(6,myDict.sizeOfDictionary());
+    /*for(Word word: myDict.getWords())
+        std::cout<<word;
+    */
+}
 
 
 

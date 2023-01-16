@@ -4,14 +4,18 @@
 #include <chrono>
 #include <iomanip>
 #include <vector>
+#include "Word.h"
 
 class Dictionary
 {
 public:
     Dictionary(){}
+    void addWord(Word word);
+    std::vector<Word> getWords();
+    int sizeOfDictionary();
 
 private:
-
+    std::vector<Word> words; 
 
 
 };
