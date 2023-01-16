@@ -36,8 +36,8 @@ public:
     {
         createDate = getDateAndTimeToString();
         knowingLevel = {};
-	updateDate = {};
-	exampleSentences = {};
+	    updateDate = {};
+	    exampleSentences = {};
     }
 
     

@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Word.h"
+#include "Dictionary.h"
 
 
 
@@ -45,11 +46,14 @@ TEST_F(ProjectTest,IfObjectWordIsCreatedAddExampleSentences)
     word.setExampleSentences("What is your name?");
     word.setExampleSentences("What is your name?");
     //std::cout<<"getUpdateDate: "<<word.getUpdateDate()<<std::endl;
-    EXPECT_EQ(2,word.getExampleSentences().size());
+    EXPECT_EQ(3,word.getExampleSentences().size());
 
 }
 
-
+TEST_F(ProjectTest,IfObjectDictionaryCanBeCreated)
+{
+    Dictionary myDict;
+}
 
 
 

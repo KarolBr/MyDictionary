@@ -16,6 +16,7 @@ FetchContent_MakeAvailable(googletest)
 SET(SRCS
 	src/main.cpp
     src/Word.cpp
+    src/Dictionary.cpp
     	)	
 
 SET(UT_SRCS
