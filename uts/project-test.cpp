@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "Word.h"
 #include "Dictionary.h"
+#include "MyFile.h"
 
 
 
@@ -76,6 +77,11 @@ TEST_F(ProjectTest,IfAddFiveWordsintoDitionarySizeShouldBeFive)
     /*for(Word word: myDict.getWords())
         std::cout<<word;
     */
+}
+
+TEST_F(ProjectTest,ObjectMyFileCanBeCreated)
+{
+    MyFile file("myNewFile.txt");
 }
 
 

@@ -53,7 +53,15 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os,Word& word)
 	{
-		os<<word.getWord() << " | "  << word.getMeaning() << std::endl;
+		os<<word.getWord() << " ; "  
+        << word.getMeaning() << " ; "
+        << word.getCreateDate() << " ; "
+        << word.getUpdateDate() << " ; "
+        << word.getKnowingLevel() << " ; ";
+        for(std::string sentence: word.getExampleSentences()){
+            os<<sentence<< " ; ";
+        }
+        os << std::endl;
 		return os;
 	}
 

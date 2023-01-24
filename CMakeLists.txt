@@ -17,6 +17,7 @@ SET(SRCS
 	src/main.cpp
     src/Word.cpp
     src/Dictionary.cpp
+    src/MyFile.cpp
     	)	
 
 SET(UT_SRCS
