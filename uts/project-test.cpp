@@ -40,6 +40,16 @@ TEST_F(ProjectTest,IfObjectWordIsModyfyingUpdataDateShouldBeSet)
 
 }
 
+TEST_F(ProjectTest,IfObjectWordIsExtendingByExampleSentencesShouldReturnThisExamples)
+{
+    Word word("name","imię");
+    word.setExampleSentences("My name is John");
+    word.setExampleSentences("What is your name?");
+    word.setExampleSentences("What was the name that girl?");
+    EXPECT_EQ("What was the name that girl?",word.getExampleSentences().at(2));
+    //std::cout<<word;
+}
+
 TEST_F(ProjectTest,IfObjectWordIsCreatedAddExampleSentences)
 {
     Word word("name","imię");
@@ -74,9 +84,9 @@ TEST_F(ProjectTest,IfAddFiveWordsintoDitionarySizeShouldBeFive)
     myDict.addWord(newWord5);
     myDict.addWord(newWord6);
     EXPECT_EQ(6,myDict.sizeOfDictionary());
-    /*for(Word word: myDict.getWords())
-        std::cout<<word;
-    */
+    //for(Word word: myDict.getWords())
+    //    std::cout<<word;
+    
 }
 
 TEST_F(ProjectTest,ObjectMyFileCanBeCreated)

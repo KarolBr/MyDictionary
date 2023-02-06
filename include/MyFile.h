@@ -10,7 +10,7 @@ public:
 
 	MyFile(std::string fileName): fileName(fileName)
 	{
-		myFile.open(fileName,std::ios::app);
+		//myFile.open(fileName,std::ios::app);
 		std::cout<<"I'm opening file ..."<<std::endl;
 	}
 

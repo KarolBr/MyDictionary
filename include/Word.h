@@ -65,6 +65,12 @@ public:
 		return os;
 	}
 
+    friend std::istream& operator>>(std::istream& in, Word& word)
+    {
+	    // read member variables of f
+	    return in;
+    }
+
     ~Word();
 };
 
