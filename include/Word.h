@@ -67,6 +67,7 @@ public:
 
     friend std::istream& operator>>(std::istream& in, Word& word)
     {
+        word.setUpdateDate();
 	    // read member variables of f
 	    return in;
     }
