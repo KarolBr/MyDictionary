@@ -13,6 +13,10 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
+include_directories(
+    include
+)
+
 add_subdirectory(configured)
 
 add_subdirectory(src)
@@ -28,9 +32,9 @@ enable_testing()
 
 
 
-include_directories(
-    include
-)
+#include_directories(
+#    include
+#)
 
 
 
