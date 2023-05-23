@@ -14,8 +14,8 @@ public:
 		std::cout<<"I'm opening file ..."<<std::endl;
 	}
 
-	void saveFile(Dictionary dict);
-	void loadFile(Dictionary dict);
+	void saveFile(Dictionary &dict);
+	void loadFile(Dictionary &dict);
 
 	~MyFile()
 	{

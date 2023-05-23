@@ -6,7 +6,7 @@
 #include <vector>
 // #include "tools.h"
 
-//std::string getDateAndTimeToString(const char *param = "%F %T");
+// std::string getDateAndTimeToString(const char *param = "%F %T");
 
 class Word
 {
@@ -36,11 +36,10 @@ public:
     {
         createDate = getDateAndTimeToString();
         knowingLevel = {};
-	    updateDate = {};
-	    exampleSentences = {};
+        updateDate = {};
+        exampleSentences = {};
     }
 
-    
     void setExampleSentences(std::string _exampleSentences);
     void setKnowingLevel(int _knowingLevel);
 
@@ -51,25 +50,28 @@ public:
     std::vector<std::string> getExampleSentences();
     int getKnowingLevel();
 
-    friend std::ostream& operator<<(std::ostream& os,Word& word)
-	{
-		os<<word.getWord() << " ; "  
-        << word.getMeaning() << " ; "
-        << word.getCreateDate() << " ; "
-        << word.getUpdateDate() << " ; "
-        << word.getKnowingLevel() << " ; ";
-        for(std::string sentence: word.getExampleSentences()){
-            os<<sentence<< " ; ";
+    friend std::ostream &operator<<(std::ostream &os, Word &word)
+    {
+        os << word.getWord() << " ; "
+           << word.getMeaning() << " ; "
+           << word.getCreateDate() << " ; "
+           << word.getUpdateDate() << " ; "
+           << word.getKnowingLevel() << " ; ";
+        for (std::string sentence : word.getExampleSentences())
+        {
+            os << sentence << " ; ";
         }
-        os << std::endl;
-		return os;
-	}
+        if (word.exampleSentences.empty())
+            os << ";";
+        os << "\n";
+        return os;
+    }
 
-    friend std::istream& operator>>(std::istream& in, Word& word)
+    friend std::istream &operator>>(std::istream &in, Word &word)
     {
         word.setUpdateDate();
-	    // read member variables of f
-	    return in;
+        // read member variables of f
+        return in;
     }
 
     ~Word();

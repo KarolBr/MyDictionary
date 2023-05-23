@@ -2,12 +2,15 @@
 
 #include "Word.h"
 #include "config.h"
+#include "Dictionary.h"
+#include "MyFile.h"
+#include "menu.h"
+
 
 int main() {
 
     std::cout <<project_name<<std::endl;
     std::cout <<project_version<<std::endl;
-    Word word("name","imię");
-    
+    menu();
     return 0;
 }

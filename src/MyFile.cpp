@@ -4,7 +4,7 @@
 #include "Dictionary.h"
 
 
-void MyFile::saveFile(Dictionary dict)
+void MyFile::saveFile(Dictionary &dict)
 {
     if(!myFile.is_open())
         myFile.open(fileName,std::ios::app);
@@ -16,7 +16,7 @@ void MyFile::saveFile(Dictionary dict)
 }
 
 
-void MyFile::loadFile(Dictionary dict)
+void MyFile::loadFile(Dictionary &dict)
 {
     std::string lineFromFile;
     if(!myFile.is_open())
