@@ -13,6 +13,7 @@ public:
     void addWord(Word word);
     std::vector<Word> getWords();
     int sizeOfDictionary();
+    void cleanDictionary();
 
 private:
     std::vector<Word> words; 

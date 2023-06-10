@@ -20,7 +20,7 @@ public:
 	~MyFile()
 	{
 		myFile.close();
-		std::cout<<"I'm closeing file ..."<<std::endl;
+		std::cout<<"I'm closing file ..."<<std::endl;
 	}
 
 private:

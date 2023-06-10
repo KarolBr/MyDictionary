@@ -15,3 +15,8 @@ int Dictionary::sizeOfDictionary()
 {
     return words.size();
 }
+
+void Dictionary::cleanDictionary()
+{
+    words.clear();
+}

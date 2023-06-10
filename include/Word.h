@@ -4,9 +4,10 @@
 #include <chrono>
 #include <iomanip>
 #include <vector>
-// #include "tools.h"
+
 
 // std::string getDateAndTimeToString(const char *param = "%F %T");
+
 
 class Word
 {
@@ -19,29 +20,23 @@ private:
     std::vector<std::string> exampleSentences;
     int knowingLevel;
     void setUpdateDate();
-
-    std::string getDateAndTimeToString(const char *param = "%F %T")
-    {
-        const std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
-        const std::time_t t_c = std::chrono::system_clock::to_time_t(now);
-        std::stringstream currTime;
-        currTime << std::put_time(std::localtime(&t_c), param);
-        return currTime.str();
-    }
-
+    
 public:
     /* behaviour */
 
-    Word(std::string _word, std::string _mean) : word(_word), meaning(_mean)
-    {
-        createDate = getDateAndTimeToString();
-        knowingLevel = {};
-        updateDate = {};
-        exampleSentences = {};
-    }
+    Word(std::string _word, std::string _mean);
 
+    Word(std::string line);
+    
+
+    Word(){};
+
+    void setWord(std::string);
+    void setMeaning(std::string);
+    void setCreateDate(std::string);
     void setExampleSentences(std::string _exampleSentences);
     void setKnowingLevel(int _knowingLevel);
+    void setUpdateDate(std::string _updateDate);
 
     std::string getCreateDate();
     std::string getUpdateDate();

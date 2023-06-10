@@ -26,7 +26,6 @@ TEST_F(ProjectTest,IfObjectWordIsCreatedMethodsGetShouldReturnValues)
 {
     Word word("name","imię");
     EXPECT_EQ("name",word.getWord());
-    //EXPECT_EQ(word.getDateAndTimeToString(),word.getCreateDate());
     EXPECT_EQ(0,word.getKnowingLevel());
 }
 
